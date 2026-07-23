@@ -19,20 +19,17 @@ public class Boucle {
         System.out.println( " Nous avons " + bouclesize + " place (s) restante (s) ") ;
         int numeroclient = 0;
 
-        while(bouclesize> 0){
+        
 
-            bouclesize -= 1;
+            
 
-            if ( "John".equals(client[numeroclient])){
-                numeroclient++;
-                bouclesize++;
-                continue;
-            }
+        do{
             Salut(client[numeroclient]);
             numeroclient += 1;
-        }
+            bouclesize -=1;
+        }while(bouclesize> 0);
+    
     }
-
     // Ici client c'est le nom de la personne à qui on doit dire salut
     private static void Salut ( String client){
 
